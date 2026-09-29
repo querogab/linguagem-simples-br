@@ -1,0 +1,11 @@
+**Arquivo:** T8__faq-esclarecimentos-pregao.txt
+**Condição:** micro
+**Modelo:** deepseek/deepseek-v4-flash
+
+**Pergunta 1.** A Administração vai verificar se as declarações das licitantes sobre cotas de PCD e Aprendizes são verdadeiras? Ela fará essa verificação no ato do registro das propostas no sistema. Ela consultará certidões, autos de infração e registros oficiais do MTE/SIT. **Resposta:** Consulte o subitem 7 do anexo "Perguntas e respostas vinculadas à contratação de serviços continuados com regime de dedicação exclusiva de mão de obra". Esse documento integra o ato convocatório da licitação.
+
+**Pergunta 2.** Se a licitante tem auto de infração vigente ou certidão que ateste descumprimento das cotas, ela será inabilitada e desclassificada? Isso segue o art. 155, VIII da Lei nº 14.133/2021 e o item 56 do Parecer n. 00060/2024/DECOR/CGU/AGU. **Resposta:** O auto de infração vigente pode impedir a contratação, nos termos do art. 155, VIII da Lei 14.133/2021. A Administração assegura contraditório e ampla defesa. A cláusula 14.4 da minuta contratual reforça: o contrato pode ser extinto antes do prazo se a licitante descumprir obrigações legais de habilitação.
+
+**Pergunta 3.** A Administração entende que o descumprimento da cota legal de PCDs e reabilitados impede a contratação? Isso deve resultar na desclassificação da proposta ou na extinção do contrato, conforme o art. 137, IX da Lei nº 14.133/2021? **Resposta:** Consulte o subitem 7.39 do anexo "Perguntas e respostas vinculadas à contratação de serviços continuados com regime de dedicação exclusiva de mão de obra". Esse documento integra o ato convocatório da licitação.
+
+**Pergunta 4.** A Administração vai implementar auditorias, análise de certidões e consulta a sistemas oficiais? Esses procedimentos serão feitos na habilitação e durante a execução contratual. Eles asseguram o cumprimento contínuo das cotas legais, conforme o art. 116 da Lei nº 14.133/2021. **Resposta:** Consulte os subitens 7.2, 7.40 e 7 do anexo.

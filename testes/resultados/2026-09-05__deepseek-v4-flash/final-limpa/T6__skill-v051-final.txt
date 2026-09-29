@@ -1,0 +1,28 @@
+**MCASP 2023 — Parte II: Procedimentos Contábeis Patrimoniais**
+
+**Depósitos Bancários Vinculados**
+
+Depósitos bancários vinculados não devem fazer parte do saldo das Disponibilidades. A classificação deles no Balanço deve considerar suas características específicas e as restrições que existem. Esses depósitos são classificados em conta separada no Ativo Circulante ou no Realizável a Longo Prazo, como créditos e valores a receber.
+
+**Aplicações Financeiras**
+
+Para que uma aplicação financeira seja classificada como equivalente de caixa (CEC), ela precisa:
+- ter a finalidade de atender a compromissos de caixa de curto prazo (e não investimento ou outros fins)
+- ser prontamente conversível em uma quantia conhecida de caixa, no curto prazo
+- estar sujeita a risco insignificante de mudança de valor
+
+Sobre o requisito de risco insignificante de mudança de valor: classificar as aplicações em pré-fixadas ou pós-fixadas não é um critério para definir o nível de risco. Os dois tipos de investimento estão expostos à volatilidade do mercado. Portanto, essa distinção não define se a aplicação deve ser medida pelo custo amortizado ou pelo valor justo.
+
+Os rendimentos das aplicações financeiras de liquidez imediata (classificadas como equivalentes de caixa) acompanham o principal. Eles devem ser registrados de forma a agregar o saldo dos valores disponíveis, ou seja, no grupo de contas de CEC.
+
+**Aspectos Orçamentários**
+
+A Lei n° 4.320/64 define o conceito de ativo financeiro para o cálculo do superavit financeiro. O superavit financeiro é a fonte para abertura de créditos adicionais. Sobre isso, destacamos os artigos 43 e 105 da lei:
+
+Art. 43. § 2º Entende-se por superávit financeiro a diferença positiva entre o ativo financeiro e o passivo financeiro, conjugando-se, ainda, os saldos dos créditos adicionais transferidos e as operações de crédito a eles vinculadas.
+
+Art. 105. § 1º O Ativo Financeiro compreenderá os créditos e valores realizáveis independentemente de autorização orçamentária e os valores numerários. § 2º O Ativo Permanente compreenderá os bens, créditos e valores, cuja mobilização ou alienação dependa de autorização legislativa.
+
+Portanto, é necessário separar os ativos em financeiros e permanentes para apurar o superavit financeiro. Para isso, as contas contábeis têm um atributo chamado indicador de superavit financeiro.
+
+---

@@ -1,0 +1,23 @@
+**Assunto:** Interpretação de dispositivos dos Anexos Normativos II, III e VI à Resolução CVM nº 175
+
+Prezados(as),
+
+Este ofício-circular esclarece o entendimento da Superintendência de Securitização e Agronegócio (SSE) sobre dispositivos da Resolução CVM nº 175 e seus Anexos Normativos II, III e VI. Os temas são: Fundos de Investimento em Direitos Creditórios (FIDC), Fundos de Investimento Imobiliários (FII) e Fundos de Investimento nas Cadeias Produtivas do Agronegócio (FIAGRO).
+
+Dúvidas sobre este ofício-circular podem ser enviadas para a SSE pelo e-mail sse@cvm.gov.br.
+
+**I) FIAGRO — Equiparação das cotas de FIAGRO a cotas de FIDC**
+
+O art. 2º do Anexo Normativo VI à Resolução CVM nº 175 trata da aplicação subsidiária de outros anexos ao FIAGRO. Isso vale quando a política do FIAGRO possibilita investir mais de 50% do patrimônio líquido em ativos que também são objeto de investimento de outra categoria de fundo. Em caso de conflito entre regras, prevalecem as do Anexo Normativo VI.
+
+Pelo Ofício-Circular nº 3/2025/CVM/SSE, esta Superintendência entendeu que:
+- os dispositivos de outros anexos a serem aplicados são os que se referem à governança dos ativos investidos para a execução da política de investimentos
+- não estão incluídos os requisitos mínimos de enquadramento da carteira
+
+Portanto, um FIAGRO que tenha como política investir mais de 50% do patrimônio líquido em direitos creditórios deve seguir o Anexo Normativo II, além do Anexo Normativo VI.
+
+No entanto, não há garantia de que o FIAGRO, nessa situação, manterá um percentual mínimo em direitos creditórios. Por isso, a SSE entende que as cotas desse FIAGRO **não** devem ser equiparadas a cotas de FIDC. Isso porque, segundo o art. 44 do Anexo Normativo II à Resolução CVM nº 175, os FIDC devem manter no mínimo 50% do patrimônio investido em direitos creditórios.
+
+Por outro lado, se o Regulamento do FIAGRO estabelecer, como política, o investimento mínimo de 50% do patrimônio em direitos creditórios, as cotas **podem** ser equiparadas a cotas de FIDC. Nesse caso, também se enquadram no conceito de direitos creditórios do art. 2º, inciso XII, do mesmo Anexo.
+
+---

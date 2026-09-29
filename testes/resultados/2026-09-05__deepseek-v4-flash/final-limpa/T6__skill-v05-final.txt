@@ -1,0 +1,29 @@
+**MCASP 2023 — Parte II: Procedimentos Contábeis Patrimoniais**
+
+**Depósitos Bancários Vinculados**
+
+Depósitos bancários vinculados não devem entrar no saldo das Disponibilidades. No Balanço, eles são classificados em conta separada, no Ativo Circulante ou no Realizável a Longo Prazo, como créditos e valores a receber. A classificação leva em conta as características específicas de cada depósito e as restrições que existem sobre ele.
+
+**4.3.3. Aplicações Financeiras**
+
+Para que uma aplicação financeira seja classificada como Caixa e Equivalentes de Caixa (CEC), ela precisa:
+- servir para pagar compromissos de caixa de curto prazo (não investimento nem outros fins)
+- ser conversível rapidamente em uma quantia conhecida de caixa, no curto prazo
+- ter risco insignificante de mudança de valor
+
+Sobre o risco: classificar a aplicação como pré-fixada ou pós-fixada não define o nível de risco. Os dois tipos estão expostos à volatilidade do mercado. Por isso, essa distinção não determina se a aplicação deve ser medida pelo custo amortizado ou pelo valor justo.
+
+Os rendimentos das aplicações financeiras de liquidez imediata (classificadas como equivalentes de caixa) acompanham o principal. Eles devem ser registrados de forma a somar-se ao saldo dos valores disponíveis, ou seja, no grupo de contas de CEC.
+
+**4.4. Aspectos Orçamentários**
+
+A Lei nº 4.320/64 define o conceito de ativo financeiro para o cálculo do superávit financeiro. O superávit financeiro é a fonte para abertura de créditos adicionais.
+
+O Art. 43 trata do superávit financeiro:
+> § 2º Entende-se por superávit financeiro a diferença positiva entre o ativo financeiro e o passivo financeiro, conjugando-se, ainda, os saldos dos créditos adicionais transferidos e as operações de crédito a eles vinculadas.
+
+O Art. 105 trata da classificação dos ativos:
+> § 1º O Ativo Financeiro compreenderá os créditos e valores realizáveis independentemente de autorização orçamentária e os valores numerários.
+> § 2º O Ativo Permanente compreenderá os bens, créditos e valores, cuja mobilização ou alienação dependa de autorização legislativa.
+
+Portanto, é preciso separar os ativos em financeiros e permanentes para calcular o superávit financeiro. Para isso, as contas contábeis têm um atributo chamado "indicador de superávit financeiro".

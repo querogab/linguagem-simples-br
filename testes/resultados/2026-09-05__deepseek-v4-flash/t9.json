@@ -1,0 +1,32 @@
+[
+  {
+    "arquivo": "T9__skill-final.txt",
+    "blocos_markdown_descartados": 0,
+    "frases_suspeitas_acima_60": 0,
+    "palavras": 297,
+    "frases": 25,
+    "tam_medio": 11.7,
+    "tam_mediana": 12,
+    "tam_max": 22,
+    "pct_acima_25": 0.0,
+    "pct_acima_30": 0.0,
+    "nominalizacoes": 0,
+    "nominalizacoes_quais": {},
+    "conectivos_burocraticos": 0,
+    "conectivos_quais": {},
+    "palavras_esquiva": 0,
+    "palavras_esquiva_quais": {},
+    "passiva_analitica": 5,
+    "passiva_se": 0,
+    "siglas_candidatas": [
+      "COTAS",
+      "FIAGRO",
+      "FIDC",
+      "FII",
+      "SSE"
+    ],
+    "por100_nominalizacao": 0.0,
+    "por100_conectivo": 0.0,
+    "por100_passiva": 1.68
+  }
+]

@@ -1,0 +1,13 @@
+MCASP 2023
+
+Parte II - Procedimentos Contábeis Patrimoniais Manual de Contabilidade Aplicada ao Setor Público e
+ tais Depósitos Bancários Vinculados não devem integrar o saldo das Disponibilidades, e sua classificação no Balanço deve levar em conta suas características específicas e as restrições existentes. Tais depósitos são classificáveis em conta à parte no Ativo Circulante ou Realizável a Longo Prazo, na condição de créditos e valores a receber.
+4.3.3. Aplicações Financeiras
+O parâmetro para que uma aplicação financeira possa ser enquadrada como CEC é que: possua a finalidade de atender a compromissos de caixa de curto prazo e não investimento ou outros fins, seja prontamente conversível em quantia conhecida de caixa, no curto prazo e esteja sujeita a risco insignificante de mudança de valor.
+Quanto ao requisito de risco insignificante de mudança de valor entende-se que classificar as aplicações financeiras em pré-fixadas ou pós-fixadas não é um critério que deve ser utilizado para definir o nível de risco, uma vez que os dois tipos de investimentos estão expostos à volatilidade do mercado, assim, realizar tal distinção, não determina o enquadramento das aplicações quanto à mensuração, se custo amortizado ou valor justo.
+Quanto aos rendimentos das aplicações financeiras de liquidez imediata, classificáveis como equivalentes de caixa, esses acompanham o principal e devem ser registrados de forma a agregar o saldo dos valores disponíveis, ou seja, no grupo de contas de CEC.
+4.4. ASPECTOS ORÇAMENTÁRIOS
+A Lei n° 4.320/64 traz o conceito de ativo de ativo financeiro para fins do cálculo do superavit financeiro, o qual é fonte para abertura de créditos adicionais. Nesse contexto destacamos os artigos 43 e 105 da referida norma:
+Art. 43. § 2º Entende-se por superávit financeiro a diferença positiva entre o ativo financeiro e o passivo financeiro, conjugando-se, ainda, os saldos dos créditos adicionais transferidos e as operações de credito a eles vinculadas.
+Art. 105. § 1º O Ativo Financeiro compreenderá os créditos e valores realizáveis independentemente de autorização orçamentária e os valores numerários. § 2º O Ativo Permanente compreenderá os bens, créditos e valores, cuja mobilização ou alienação dependa de autorização legislativa.
+Logo, é necessário segregar os ativos em: financeiros e permanentes, para fins de apuração do superavit financeiro e para tanto as contas contábeis possuem um atributo de indicador de superavit financeiro.

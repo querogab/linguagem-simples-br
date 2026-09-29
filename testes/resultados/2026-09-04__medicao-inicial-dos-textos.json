@@ -1,0 +1,74 @@
+[
+  {
+    "arquivo": "CTRL-POS__senado-noticia.txt",
+    "palavras": 298,
+    "frases": 18,
+    "tam_medio": 16.6,
+    "tam_mediana": 18,
+    "tam_max": 29,
+    "pct_acima_25": 16.7,
+    "pct_acima_30": 0.0,
+    "nominalizacoes": 0,
+    "nominalizacoes_quais": {},
+    "conectivos_burocraticos": 0,
+    "conectivos_quais": {},
+    "palavras_esquiva": 0,
+    "palavras_esquiva_quais": {},
+    "passiva_analitica": 3,
+    "passiva_se": 0,
+    "siglas_candidatas": [],
+    "por100_nominalizacao": 0.0,
+    "por100_conectivo": 0.0,
+    "por100_passiva": 1.01
+  },
+  {
+    "arquivo": "T1__lei-15263-arts-5-8.txt",
+    "palavras": 306,
+    "frases": 22,
+    "tam_medio": 13.7,
+    "tam_mediana": 11,
+    "tam_max": 49,
+    "pct_acima_25": 13.6,
+    "pct_acima_30": 9.1,
+    "nominalizacoes": 1,
+    "nominalizacoes_quais": {
+      "cumprimento de": 1
+    },
+    "conectivos_burocraticos": 1,
+    "conectivos_quais": {
+      "a fim de": 1
+    },
+    "palavras_esquiva": 0,
+    "palavras_esquiva_quais": {},
+    "passiva_analitica": 1,
+    "passiva_se": 0,
+    "siglas_candidatas": [],
+    "por100_nominalizacao": 0.33,
+    "por100_conectivo": 0.33,
+    "por100_passiva": 0.33
+  },
+  {
+    "arquivo": "T2__lei-9610-art-46.txt",
+    "palavras": 372,
+    "frases": 13,
+    "tam_medio": 28.5,
+    "tam_mediana": 32,
+    "tam_max": 58,
+    "pct_acima_25": 61.5,
+    "pct_acima_30": 61.5,
+    "nominalizacoes": 2,
+    "nominalizacoes_quais": {
+      "utilização de": 2
+    },
+    "conectivos_burocraticos": 0,
+    "conectivos_quais": {},
+    "palavras_esquiva": 0,
+    "palavras_esquiva_quais": {},
+    "passiva_analitica": 2,
+    "passiva_se": 0,
+    "siglas_candidatas": [],
+    "por100_nominalizacao": 0.54,
+    "por100_conectivo": 0.0,
+    "por100_passiva": 0.54
+  }
+]

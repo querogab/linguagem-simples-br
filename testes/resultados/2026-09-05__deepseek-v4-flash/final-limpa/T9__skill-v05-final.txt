@@ -1,0 +1,21 @@
+**Assunto:** Interpretação de dispositivos dos Anexos Normativos II, III e VI à Resolução CVM nº 175
+
+Prezados(as),
+
+Este Ofício-Circular esclarece o entendimento da Superintendência de Securitização e Agronegócio (SSE) sobre a Resolução CVM nº 175 e seus Anexos Normativos II, III e VI. O foco são os Fundos de Investimento em Direitos Creditórios (FIDC), Fundos de Investimento Imobiliários (FII) e Fundos de Investimento nas Cadeias Produtivas do Agronegócio (FIAGRO).
+
+Dúvidas sobre o conteúdo podem ser enviadas para a SSE pelo e-mail sse@cvm.gov.br.
+
+---
+
+**I) FIAGRO — Equiparação das cotas de FIAGRO a cotas de FIDC**
+
+O art. 2º do Anexo Normativo VI determina que o FIAGRO deve seguir outros anexos normativos quando sua política permitir investir mais de 50% do patrimônio líquido em ativos que também sejam objeto de outra categoria de fundo. Em caso de conflito entre as regras, prevalece o Anexo Normativo VI.
+
+Pelo Ofício-Circular nº 3/2025/CVM/SSE, esta Superintendência entendeu que os dispositivos de outros anexos a serem aplicados são apenas aqueles sobre a governança dos ativos investidos — e **não** os requisitos mínimos de enquadramento da carteira.
+
+Portanto, um FIAGRO que pode investir mais de 50% do patrimônio líquido em direitos creditórios deve seguir o Anexo Normativo II (além do Anexo Normativo VI).
+
+No entanto, não há garantia de que esse FIAGRO manterá um percentual mínimo em direitos creditórios. Por isso, a SSE entende que as cotas desse FIAGRO **não** podem ser equiparadas a cotas de FIDC. Isso porque, segundo o art. 44 do Anexo Normativo II, os FIDC devem manter no mínimo 50% do patrimônio investido em direitos creditórios.
+
+Por outro lado, se o Regulamento do FIAGRO estabelecer o investimento mínimo de 50% do patrimônio em direitos creditórios, essas cotas **podem** ser equiparadas a cotas de FIDC. Nesse caso, elas também se enquadram no conceito de direitos creditórios do art. 2º, inciso XII, do mesmo Anexo.

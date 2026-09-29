@@ -1,0 +1,132 @@
+{
+  "skill_name": "linguagem-simples-br",
+  "_nota": "Escrito em 06/09/26 e atualizado para a distribuicao publica. Cada eval corresponde a um comportamento declarado da skill. Ver testes/plano-de-testes.md para o desenho completo e testes/resultados/ para as evidencias preservadas.",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "revisa este texto para o cidadão comum entender",
+      "expected_output": "Reescrita em linguagem simples que derruba a cauda de frases longas sem perder fato, prazo, condição ou remissão legal.",
+      "files": ["../testes/textos/T9__oficio-circular-cvm.txt"],
+      "expectations": [
+        "Nenhuma frase da versão entregue passa de 30 palavras",
+        "A frase mais longa da versão entregue tem menos palavras que a mais longa do original (60)",
+        "Todas as remissões do original aparecem na saída: Resolução CVM 175, Anexo Normativo II, Anexo Normativo VI, FIAGRO, FIDC, FII, Ofício-Circular 3/2025",
+        "O grau de certeza do original é preservado: 'deverá' e 'poderá' não viram afirmação direta",
+        "A entrega diz quantas frases ficaram como estavam"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "revisa este texto para o cidadão comum entender",
+      "expected_output": "Reescrita de edital que zera a cauda de frases longas e preserva prazos e requisitos.",
+      "files": ["../testes/textos/T7__edital-uece-17-2025.txt"],
+      "expectations": [
+        "Nenhuma frase da versão entregue passa de 30 palavras",
+        "Nenhum prazo, valor ou requisito do original desaparece",
+        "Itens de lista com letra ou número continuam separados, com os mesmos identificadores, ordem e nível hierárquico",
+        "Como os problemas ocupam a maior parte das 306 palavras, a skill reescreve tudo sem fazer uma pergunta de escopo que não oferece escolha útil",
+        "Se houver quadro-resumo, ele aparece separado, identificado como resumo e não substitui os itens oficiais"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Revise esta frase para o cidadão comum entender: A inscrição termina às 18h de sexta-feira.",
+      "expected_output": "A frase já está clara. A skill deve devolvê-la intacta e dizer que não mexeu.",
+      "files": [],
+      "expectations": [
+        "A saída é idêntica à entrada, ou a skill declara explicitamente que não alterou",
+        "A skill não troca palavras por sinônimos de tamanho parecido",
+        "A skill não reordena a frase sem ganho de clareza"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Adapta este texto para Leitura Fácil, para pessoas com deficiência intelectual.",
+      "expected_output": "A skill recusa, explica que Leitura Fácil é outro escopo, e nomeia a regra que decide: material de Leitura Fácil só é Leitura Fácil depois de validado por um grupo de pessoas com deficiência intelectual. Entrega rascunho para validação, nunca produto pronto.",
+      "files": ["../testes/textos/T3__c4-trecho-curto.txt"],
+      "expectations": [
+        "A skill diz que Linguagem Simples e Leitura Fácil são escopos diferentes",
+        "A skill afirma que Leitura Fácil exige validação por pessoas com deficiência intelectual",
+        "A skill não entrega o resultado como material de Leitura Fácil pronto para uso"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Quais são as 18 técnicas do art. 5º da Lei 15.263? Cite o número de cada inciso. Depois me dá um exemplo antes/depois do Manual da Câmara da Patricia Roedel para cada uma.",
+      "expected_output": "Lista os 18 incisos corretamente e RECUSA inventar exemplo atribuído ao Manual da Câmara onde não tem o texto em mãos.",
+      "files": [],
+      "expectations": [
+        "Os 18 incisos aparecem com o número romano correto",
+        "Nenhum exemplo é atribuído a Patricia Roedel ou ao Manual da Câmara sem que a skill tenha o texto e a página",
+        "A skill diz explicitamente quando não tem a fonte, em vez de preencher a lacuna"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "deixa isso o mais simples possível, para qualquer pessoa",
+      "expected_output": "Sob pressão para simplificar ao máximo, a skill mantém a norma culta, não infantiliza e não descarta nuance técnica nem condição legal.",
+      "files": ["../testes/textos/T2__lei-9610-art-46.txt"],
+      "expectations": [
+        "As condições que fazem a exceção legal valer continuam no texto: 'sem intuito de lucro', 'um só exemplar', 'menção ao nome do autor', 'sem fins comerciais'",
+        "As quatro alíneas do inciso I continuam distinguíveis",
+        "O texto não vira linguagem infantilizada"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Revise o texto e mostre a tabela antes/depois/por quê. O texto diz: A contratação poderá ser impedida se houver auto de infração vigente. A resposta completa está no anexo.",
+      "expected_output": "A revisão preserva a modalidade e a remissão. A tabela descreve somente mudanças que aparecem no original e na versão final.",
+      "files": [],
+      "expectations": [
+        "A versão final mantém 'poderá' ou formulação com o mesmo grau de possibilidade; não vira 'será' nem uma resposta categórica",
+        "A versão final mantém a informação de que a resposta completa está no anexo",
+        "Cada trecho da coluna original existe literalmente na entrada",
+        "Cada trecho da coluna revisada existe literalmente na versão final",
+        "A justificativa não menciona contagem de palavras sem apresentar contagem correta"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Revise este trecho de uma empresa privada: Todes podem enviar sua contribuição até sexta-feira. Preserve as decisões de linguagem da organização.",
+      "expected_output": "A skill não trata a flexão neutra como defeito técnico em texto privado e preserva a decisão da organização.",
+      "files": [],
+      "expectations": [
+        "A saída não invoca a vedação do inciso XI como obrigação para a empresa privada",
+        "A saída não troca 'Todes' apenas por ser uma flexão neutra"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Revise este trecho, mantendo a citação literal: A lei diz: 'Esta é uma citação literal longa que não pode ser reescrita, ainda que ultrapasse o tamanho recomendado para uma frase'. Explique em seguida em linguagem simples.",
+      "expected_output": "A citação permanece idêntica e a explicação ao redor pode ser simplificada.",
+      "files": [],
+      "expectations": [
+        "O conteúdo entre aspas permanece idêntico",
+        "A explicação é apresentada fora das aspas e identificada como explicação ou paráfrase"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Revise este aviso de uma prefeitura: Todes podem enviar sua contribuição até sexta-feira.",
+      "expected_output": "A skill identifica o contexto público, trata a flexão como questão da Lei 15.263/2025 e não como defeito técnico de linguagem simples.",
+      "files": [],
+      "expectations": [
+        "A saída explica que o inciso XI do art. 5º se aplica ao contexto de órgão público",
+        "A saída não apresenta a flexão neutra como vício técnico universal de linguagem simples",
+        "A orientação distingue explicitamente o contexto público do privado"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Revise este trecho de edital sem alterar a numeração nem inventar informação: 3.2 O candidato/a deverá entregar estas no prazo de 5 dias.",
+      "expected_output": "A revisão preserva o item 3.2 e o prazo, trata a barra de gênero sem confundi-la com flexão neutra e aponta que 'estas' não tem referente identificável.",
+      "files": [],
+      "expectations": [
+        "O identificador 3.2 permanece ligado ao mesmo conteúdo",
+        "O prazo de 5 dias e a modalidade obrigatória de 'deverá' são preservados",
+        "A barra em 'candidato/a' é substituída por construção gramatical inclusiva sem barra, sem invocar a vedação legal a flexões neutras",
+        "A saída identifica que 'estas' é ambíguo e não inventa o objeto que deve ser entregue"
+      ]
+    }
+  ]
+}

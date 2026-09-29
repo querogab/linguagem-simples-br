@@ -1,0 +1,29 @@
+**Depósitos bancários vinculados**
+
+Depósitos bancários vinculados são valores que têm uma destinação específica. Eles **não** entram no saldo de disponibilidades (dinheiro disponível). No balanço, eles ficam em uma conta separada, como créditos a receber — no curto prazo (Ativo Circulante) ou no longo prazo.
+
+**4.3.3 Aplicações Financeiras**
+
+Para ser classificada como CEC (Caixa e Equivalentes de Caixa), a aplicação financeira precisa:
+
+- servir para pagar compromissos de curto prazo (e não para investimento ou outros fins)
+- poder ser convertida em dinheiro rapidamente, em valor conhecido
+- ter risco muito baixo de mudança de valor
+
+Para avaliar o risco, não basta separar as aplicações entre pré-fixadas (taxa fixa) e pós-fixadas (taxa variável). Os dois tipos sofrem oscilações do mercado. Por isso, essa diferença não define se a aplicação deve ser medida pelo custo amortizado ou pelo valor justo.
+
+Os rendimentos das aplicações de liquidez imediata (que são equivalentes de caixa) acompanham o valor principal. Eles devem ser registrados junto com o saldo disponível, no grupo CEC.
+
+**4.4 Aspectos Orçamentários**
+
+Para calcular o superavit financeiro (sobra de recursos), a Lei nº 4.320/64 exige separar os ativos em dois grupos: financeiros e permanentes. O superavit financeiro serve como fonte para abrir créditos adicionais.
+
+Veja o que diz a lei:
+
+- **Art. 43, § 2º:** Superavit financeiro é a diferença positiva entre o ativo financeiro e o passivo financeiro, considerando também os saldos de créditos adicionais transferidos e as operações de crédito vinculadas.
+- **Art. 105, § 1º:** O Ativo Financeiro inclui os créditos e valores que podem ser realizados sem autorização orçamentária, além dos valores em dinheiro.
+- **Art. 105, § 2º:** O Ativo Permanente inclui os bens, créditos e valores que dependem de autorização legislativa para serem vendidos ou transferidos.
+
+Por isso, as contas contábeis têm um indicador que classifica cada ativo como financeiro ou permanente. Essa separação é necessária para calcular o superavit financeiro.
+
+---
