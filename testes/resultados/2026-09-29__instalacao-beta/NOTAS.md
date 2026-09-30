@@ -45,4 +45,17 @@ npx skills add querogab/linguagem-simples-br --agent opencode --copy -y
 
 O pacote publicado tinha oito arquivos. O `SKILL.md` instalado reproduziu o SHA-256 `4BAD6E6AFACD1EFE8F0F86827F95D736B3C54D39282FD80238F8EAE10D5BDBC3`, e o OpenCode `1.18.33` carregou a cópia instalada em processo novo.
 
-Esta evidência não cobre as correções de auditoria posteriores, que acrescentaram avisos e o texto da licença ao pacote. Essa versão corrigida precisa de uma nova instalação reproduzida antes de ser publicada.
+Esta primeira evidência não cobre as correções de auditoria posteriores, que acrescentaram avisos e o texto da licença ao pacote. Por isso, a instalação foi repetida na contraprova abaixo.
+
+## Instalação pública da v0.6.0-beta.3
+
+- **Data:** 30/09/26
+- **Ferramenta:** OpenCode `1.18.33`
+- **Candidato:** `v0.6.0-beta.3`
+- **SHA-256 do `SKILL.md`:** `A3A546AF8B54F28DBEE69B29D1D6E089378F2221894AE686685FBEEB05C5C58F`
+
+Depois da reescrita do `main`, a instalação pela URL pública foi repetida com o mesmo comando. O instalador encontrou uma skill e copiou 10 arquivos para `.agents/skills/linguagem-simples-br/` num projeto temporário limpo.
+
+A comparação por caminho e SHA-256 confirmou igualdade byte a byte entre os 10 arquivos instalados e a fonte pública local. Com as skills externas do Claude Code desativadas, `opencode debug skill` carregou `linguagem-simples-br` a partir da pasta temporária e mostrou a versão `0.6.0-beta.3`.
+
+Não houve chamada de modelo nesta contraprova. Ela verifica descoberta, cópia, integridade e carregamento do pacote; os casos comportamentais permanecem nas rodadas próprias.

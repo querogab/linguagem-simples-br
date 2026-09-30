@@ -4,7 +4,7 @@ Skill para revisar textos em **Linguagem Simples (LS)** no português do Brasil.
 
 Segue o [Manual de Linguagem Simples da Câmara dos Deputados](https://bd.camara.leg.br/bd/handle/bdcamara/41947) (Patricia Roedel, 2024), a norma **ABNT NBR ISO 24495-1:2024** e a [Lei 15.263/2025](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15263.htm), que instituiu a Política Nacional de Linguagem Simples.
 
-> **Última versão publicada: v0.6.0-beta.2.** Esta árvore contém correções de auditoria ainda não publicadas. O pacote corrigido precisa de nova instalação reproduzida antes da próxima versão. O teste com leitores continua pendente. Os números desta página vêm da v0.5.1 e não são atribuídos automaticamente à beta. Ver [CHANGELOG](CHANGELOG.md).
+> **Status: v0.6.0-beta.3.** Esta beta retira material cuja redistribuição não estava inequívoca, elimina registros internos do histórico público e leva licença e avisos de terceiros no pacote. A instalação pública de 10 arquivos foi reproduzida no OpenCode 1.18.33. O teste com leitores continua pendente. Os números desta página vêm da v0.5.1 e não são atribuídos automaticamente à beta. Ver [CHANGELOG](CHANGELOG.md).
 
 Outros contextos também usam os termos **linguagem cidadã** e **linguagem clara**. Aqui vale "linguagem simples", o termo da norma ABNT e da lei brasileira.
 
@@ -23,7 +23,7 @@ Não serve para:
 
 ## Como instalar
 
-A skill está na pasta [`.agents/skills/linguagem-simples-br/`](.agents/skills/linguagem-simples-br/). O pacote usa o formato Agent Skills. A beta.2 publicada foi instalada e testada no OpenCode 1.18.33; o pacote corrigido desta árvore ainda precisa repetir essa verificação. Compatibilidade com outras ferramentas permanece esperada pelo formato, não garantida.
+A skill está na pasta [`.agents/skills/linguagem-simples-br/`](.agents/skills/linguagem-simples-br/). O pacote usa o formato Agent Skills. Na beta.3, os 10 arquivos foram instalados pela URL pública, conferidos byte a byte e carregados em processo novo pelo OpenCode 1.18.33. Compatibilidade com outras ferramentas permanece esperada pelo formato, não garantida.
 
 **Se você usa terminal:**
 
@@ -155,6 +155,7 @@ Ele leva um controle positivo a cada mudança. Em 06/09/26 ganhou um **segundo c
 - ✅ v0.5 / v0.5.1 *(05–06/09/26)*: trava de modalidade e freio de sobre-edição, este subordinado à régua objetiva de tamanho de frase
 - ✅ **v0.6.0-beta.1:** pacote com referência legal e cinco exemplos conferidos; quatro casos comportamentais aprovados; descoberta automática e instalação pública reproduzidas no OpenCode
 - **v0.6.0-beta.2:** quatro ajustes derivados de uso real em edital, com contraprovas para estrutura e fidelidade; teste com leitores pendente
+- **v0.6.0-beta.3:** distribuição sanitizada, licenças delimitadas e histórico público reiniciado sem os materiais retirados
 - v1.0: comportamento da beta validado com uso externo e leitor do público-alvo; documentação fechada
 - v1.1: README bilíngue, templates por gênero, modo "revisar resposta de IA", evals
 

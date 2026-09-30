@@ -2,7 +2,7 @@
 
 Este arquivo registra mudanças que afetam quem usa a skill. Métodos, entradas e resultados completos ficam em [`testes/resultados/`](testes/resultados/).
 
-## v0.6.0-beta.3 — não publicada
+## v0.6.0-beta.3 — 30/09/26
 
 ### Corrigido
 
@@ -11,6 +11,11 @@ Este arquivo registra mudanças que afetam quem usa a skill. Métodos, entradas 
 - A licença MIT passou a ser delimitada por `THIRD_PARTY_NOTICES.md` para não relicenciar textos-fonte de terceiros.
 - README e skill agora descrevem de forma coerente o uso em textos de marca pessoal.
 - Recomendações de design e teste deixaram de apresentar limites contextuais como regras universais.
+
+### Verificado
+
+- Os 10 arquivos foram instalados pela URL pública, conferidos byte a byte e carregados pelo OpenCode `1.18.33`.
+- A árvore e o histórico público ficaram sem os materiais retirados, caminhos locais e registros internos excluídos.
 
 ## v0.6.0-beta.2 — 29/09/26
 
