@@ -1,5 +1,7 @@
 # linguagem-simples-br
 
+**Linguagem Simples** é uma forma de comunicar que organiza palavras, estrutura e design para ajudar o público a encontrar, entender e usar a informação de que precisa.
+
 Skill para revisar textos em **Linguagem Simples** no português do Brasil.
 
 Ela ajuda a encontrar problemas de estrutura, frases e vocabulário, reescreve o que atrapalha a leitura e inclui uma conferência para evitar a perda de fatos, prazos, condições e referências legais. Foi construída com base na **ABNT NBR ISO 24495-1:2024**, no [Manual de Linguagem Simples da Câmara dos Deputados](https://bd.camara.leg.br/bd/handle/bdcamara/41947) e na [Lei 15.263/2025](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15263.htm).
@@ -175,7 +177,7 @@ Se o único objetivo é encurtar frases, o prompt de oito linhas foi suficiente 
 
 Os números vêm da v0.5.1 e não são atribuídos automaticamente à beta atual. Como cada condição rodou uma vez, também não há uma taxa geral de acerto nem uma estimativa de variação entre rodadas.
 
-O [plano de testes](testes/plano-de-testes.md), o [critério de cobertura](testes/gabarito-cobertura.md), o [`medir.py`](testes/medir.py) e os [resultados](testes/resultados/) estão publicados. Resultados afetados por vazamento de contexto ou por material sem redistribuição inequívoca não sustentam as alegações desta página.
+O [plano de testes](testes/plano-de-testes.md), o [critério de cobertura](testes/gabarito-cobertura.md), o [`medir.py`](testes/medir.py) e os [resultados](testes/resultados/) estão publicados. As conclusões acima usam apenas testes com condições isoladas e materiais que podiam ser publicados. Resultados contaminados por contato prévio com a skill ou baseados em textos sem permissão clara de redistribuição foram excluídos.
 
 ## Limites atuais
 
