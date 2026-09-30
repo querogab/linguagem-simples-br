@@ -2,6 +2,16 @@
 
 Este arquivo registra mudanças que afetam quem usa a skill. Métodos, entradas e resultados completos ficam em [`testes/resultados/`](testes/resultados/).
 
+## Em desenvolvimento
+
+### Adicionado
+
+- Gerador reproduzível de pacotes para Claude web/Cowork, Gemini web pessoal, ChatGPT Skill e plugin do ChatGPT, todos derivados do mesmo `SKILL.md`.
+
+### Ainda não verificado
+
+- A estrutura e a integridade dos quatro ZIPs foram conferidas localmente. O upload e o comportamento no Claude web, no Cowork, no Gemini web e no ChatGPT web ainda precisam de teste próprio.
+
 ## v0.6.0-beta.3 — 30/09/26
 
 ### Corrigido

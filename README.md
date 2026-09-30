@@ -71,6 +71,32 @@ npx skills add querogab/linguagem-simples-br -g
 
 Em uma ferramenta que não carrega Agent Skills, você pode colar o conteúdo do `SKILL.md`, sem o cabeçalho entre `---`, no campo de instruções. Nesse modo, os arquivos de `references/` e `exemplos/` não ficam disponíveis automaticamente. O uso manual ainda não foi testado nesta beta.
 
+### Interfaces web
+
+Para gerar todos os ZIPs a partir da mesma fonte canônica, sem manter outra cópia editável da skill:
+
+```bash
+python scripts/gerar-pacotes-web.py
+```
+
+#### Claude web e Cowork
+
+O upload do Claude usa `skill.md` em minúsculas e limita a descrição a 200 caracteres.
+
+Depois, em **Customize > Skills**, escolha **Upload a skill** e envie `dist/linguagem-simples-br-claude-web-cowork-0.6.0-beta.3.zip`. A [Anthropic documenta](https://support.claude.com/en/articles/12512180-use-skills-in-claude) o recurso nos planos Free, Pro, Max, Team e Enterprise e o uso da mesma skill no chat e no Cowork. A execução de código precisa estar habilitada; organizações podem restringir uploads.
+
+#### Gemini web
+
+Em uma conta pessoal com Skills liberadas, abra **Skills**, envie `dist/linguagem-simples-br-gemini-web-0.6.0-beta.3.zip` e habilite a skill. O pacote conserva o `SKILL.md` e os recursos na raiz, como pede a [documentação do Gemini Apps](https://support.google.com/gemini/answer/17094296). O recurso está em implantação gradual e pode ainda não aparecer em todas as contas.
+
+#### ChatGPT web
+
+[Contas elegíveis](https://help.openai.com/articles/20001066) do ChatGPT Business, Enterprise, Healthcare e Edu podem abrir **Plugins > Skills > Create > Upload from your computer** e enviar `dist/linguagem-simples-br-chatgpt-skill-0.6.0-beta.3.zip`.
+
+O gerador também cria `dist/linguagem-simples-br-chatgpt-plugin-0.6.0-beta.3.zip`, um plugin mínimo para distribuição da skill no ChatGPT web. Publicar o plugin no diretório da OpenAI exige o [processo próprio de submissão e revisão](https://developers.openai.com/plugins/deploy/submission).
+
+Os quatro ZIPs passam por conferência de estrutura, integridade, versão e caminhos antes de serem gravados. O upload e o comportamento no Claude web, no Cowork, no Gemini web e no ChatGPT web ainda não foram testados nesta beta.
+
 ## Como usar
 
 Peça a revisão diretamente:
