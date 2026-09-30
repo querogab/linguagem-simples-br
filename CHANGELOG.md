@@ -15,6 +15,7 @@ Este arquivo registra mudanças que afetam quem usa a skill. Métodos, entradas 
 ### Verificado
 
 - Os 10 arquivos foram instalados pela URL pública, conferidos byte a byte e carregados pelo OpenCode `1.18.33`.
+- A Gabi instalou e usou a skill no Claude Code e no Codex; esses testes práticos ainda não têm roteiro reproduzível registrado.
 - A árvore e o histórico público ficaram sem os materiais retirados, caminhos locais e registros internos excluídos.
 
 ## v0.6.0-beta.2 — 29/09/26
@@ -57,5 +58,5 @@ Detalhes: [`testes/resultados/2026-09-28__beta-comportamental/`](testes/resultad
 ## Limites atuais
 
 - Ainda não houve teste com leitores do público-alvo.
-- A instalação foi verificada no OpenCode. Nas demais ferramentas, a compatibilidade é esperada pelo formato Agent Skills, mas ainda não foi reproduzida.
+- A instalação tem contraprova reproduzível no OpenCode. Claude Code e Codex passaram em testes práticos; nas demais ferramentas, a compatibilidade é esperada pelo formato Agent Skills, mas ainda não foi reproduzida.
 - Cada caso comportamental teve uma execução por estado testado. Os resultados confirmam regressões específicas, não uma taxa geral de acerto.
