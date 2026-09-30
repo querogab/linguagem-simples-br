@@ -122,27 +122,54 @@ Se o pedido for de Leitura Fácil, a skill explica a diferença e oferece apenas
 
 A avaliação automática é só um indício. A skill recomenda leitura em voz alta, pergunta de compreensão, teste de lacunas ou observação de uso, conforme o texto e a ação esperada.
 
-## O que foi medido
+## O que os testes mostraram
 
-Cinco gêneros de texto público foram revisados em três condições: modelo sem instrução adicional, prompt curto de oito linhas e skill. Cada condição rodou uma vez, no mesmo modelo e em uma janela separada.
+Os testes fizeram perguntas diferentes. A primeira foi: **qual instrução produz menos frases longas?** A segunda: **qual delas preserva todos os itens de um texto legal?** Separar as duas evita tratar frase curta como sinônimo de texto fiel ou fácil de entender.
 
-| Medida | Modelo sozinho | Prompt de 8 linhas | Com a skill |
-|---|---:|---:|---:|
-| Média de frases acima de 30 palavras nos cinco textos | 11,8% | **0,0%** | 3,3% |
-| Itens preservados no art. 5º da Lei 15.263 | 18/18 | 18/18 | 18/18 |
-| Itens preservados no art. 46 da Lei 9.610 | 11/11 | 11/11 | 11/11 |
+Na v0.5.1, cinco gêneros de texto público foram revisados de três formas:
 
-O resultado é direto: para encurtar frases, o prompt de oito linhas foi melhor. Na cobertura dos dois textos legais, houve empate. A skill não alega superioridade nesses pontos.
+1. só o modelo, sem instrução adicional;
+2. o modelo com um prompt de oito linhas;
+3. o modelo com a skill.
 
-As medidas de tamanho são **proxies de legibilidade**, não prova de compreensão. Os números vêm da v0.5.1 e não são atribuídos automaticamente à beta atual. Uma execução por condição também não permite estimar variação entre rodadas.
+Cada forma rodou uma vez por texto, no mesmo modelo e em uma janela separada.
 
-O que a execução da v0.5.1 demonstrou:
+### 1. Qual produziu menos frases longas?
 
-- a skill reduziu a proporção de frases longas em relação ao modelo sozinho;
-- preservou todos os itens contados nos dois textos legais;
-- recusou tratar um rascunho como Leitura Fácil pronta e explicou a validação necessária.
+| Forma de revisão | Média de frases acima de 30 palavras |
+|---|---:|
+| Só o modelo | 11,8% |
+| Prompt de 8 linhas | **0,0%** |
+| Com a skill | 3,3% |
 
-Nas contraprovas da beta, a skill preservou citação, numeração, modalidade e prazo e marcou um referente ausente sem inventar a informação.
+O prompt de oito linhas foi o melhor para encurtar frases: não deixou nenhuma acima de 30 palavras. A skill ficou entre ele e o modelo sozinho.
+
+Esse número mede apenas o tamanho das frases. Frase curta pode continuar confusa ou perder informação. Só um teste com leitores mostra se o público encontra, entende e usa o conteúdo.
+
+### 2. Qual preservou os itens dos textos legais?
+
+As três formas empataram nos dois textos usados para essa conferência:
+
+- art. 5º da Lei 15.263: **18 de 18 itens preservados**;
+- art. 46 da Lei 9.610: **11 de 11 itens preservados**.
+
+O teste mostra que a skill preservou todos os itens contados nesses dois textos. Não mostra que ela preservará todo fato em qualquer documento, nem que supera um prompt curto nessa tarefa.
+
+### 3. O que foi conferido na beta?
+
+As contraprovas da beta verificaram problemas específicos encontrados no uso. Nelas, a skill:
+
+- manteve uma citação literal;
+- preservou numeração, modalidade e prazo;
+- marcou um referente ausente em vez de inventar a informação.
+
+Em outro teste de escopo, a skill recusou apresentar um rascunho como Leitura Fácil pronta e explicou a validação necessária. O modelo sem a skill falhou nesse ponto nos dois modelos testados.
+
+### Como interpretar
+
+Se o único objetivo é encurtar frases, o prompt de oito linhas foi suficiente e teve o melhor resultado. A skill acrescenta um fluxo de diagnóstico, conferência e tratamento de casos como Leitura Fácil, modalidade e contexto legal brasileiro. Os testes ainda não permitem afirmar que ela melhora a compreensão do público.
+
+Os números vêm da v0.5.1 e não são atribuídos automaticamente à beta atual. Como cada condição rodou uma vez, também não há uma taxa geral de acerto nem uma estimativa de variação entre rodadas.
 
 O [plano de testes](testes/plano-de-testes.md), o [critério de cobertura](testes/gabarito-cobertura.md), o [`medir.py`](testes/medir.py) e os [resultados](testes/resultados/) estão publicados. Resultados afetados por vazamento de contexto ou por material sem redistribuição inequívoca não sustentam as alegações desta página.
 
@@ -167,9 +194,6 @@ O código, a skill e a documentação autoral estão sob **MIT**. Trechos de doc
 
 Abra uma issue com um caso de uso, uma dúvida ou um problema encontrado. Texto que deu errado na revisão é a contribuição mais útil: ele mostra onde a regra precisa melhorar.
 
-## Créditos
+## Referências
 
-- **Patricia Roedel**, autora do Manual de Linguagem Simples da Câmara dos Deputados
-- **Heloísa Fischer**, pioneira de Linguagem Simples no Brasil e fundadora da [Comunica Simples](https://comunicasimples.com.br)
-- **ICICT/Fiocruz**, Guia de Linguagem e Design Simples
-- **International Plain Language Federation**, [definição internacional de Plain Language](https://www.iplfederation.org/plain-language/)
+A fundamentação da skill e os links para as obras consultadas estão na seção [Referências do `SKILL.md`](.agents/skills/linguagem-simples-br/SKILL.md#referências). A presença nessa lista indica fonte de consulta, não participação das autoras ou instituições no desenvolvimento deste projeto.
