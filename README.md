@@ -10,13 +10,17 @@ Ela ajuda a encontrar problemas de estrutura, frases e vocabulário, reescreve o
 
 **Antes**
 
-> Contribuir para reduzir o tempo médio de titulação de mestres e doutores, a partir da capacitação de potenciais ingressantes em Programas de Pós-Graduação stricto sensu.
+> O parâmetro para que uma aplicação financeira possa ser enquadrada como CEC é que: possua a finalidade de atender a compromissos de caixa de curto prazo e não investimento ou outros fins, seja prontamente conversível em quantia conhecida de caixa, no curto prazo e esteja sujeita a risco insignificante de mudança de valor.
 
 **Depois**
 
-> Reduzir o tempo médio para formar mestres e doutores. Isso começa com a capacitação de quem pode ingressar em programas de pós-graduação stricto sensu.
+> Para que uma aplicação financeira seja classificada como equivalente de caixa (CEC), ela precisa:
+>
+> - ter a finalidade de atender a compromissos de caixa de curto prazo (e não investimento ou outros fins)
+> - ser prontamente conversível em uma quantia conhecida de caixa, no curto prazo
+> - estar sujeita a risco insignificante de mudança de valor
 
-A frase foi dividida e "potenciais ingressantes" virou "quem pode ingressar". Nenhum requisito de inscrição foi acrescentado. Este par veio de uma saída da v0.5.1 e foi conferido contra a [Chamada Pública nº 17/2025 da UECE](.agents/skills/linguagem-simples-br/exemplos/03-uece-objetivo.md). Ele mostra uma transformação pontual, não prova que todo o documento ficou mais fácil de entender.
+A sigla foi expandida e os três critérios ficaram separados. Nenhuma condição foi retirada. Este par veio de uma saída da v0.5.1 e foi conferido contra o [Manual de Contabilidade Aplicada ao Setor Público](.agents/skills/linguagem-simples-br/exemplos/02-mcasp-aplicacoes.md). Ele mostra uma transformação pontual e não dispensa validação técnica do conteúdo contábil.
 
 ## Para que serve
 
