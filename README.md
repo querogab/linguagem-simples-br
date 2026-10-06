@@ -89,6 +89,25 @@ Depois, em **Customize > Skills**, escolha **Upload a skill** e envie `dist/ling
 
 Em uma conta pessoal com Skills liberadas, abra **Skills** e envie `dist/gemini-web/SKILL.md`. O gerador deriva esse arquivo da fonte canônica e troca somente três instruções que o Gemini Flash interpretou de forma diferente nos testes. A interface observada em 06/10/26 aceitou Markdown, mas não ZIP. `references/` e `exemplos/` não acompanham a skill; esta opção instala o núcleo da revisão. O recurso está em implantação gradual e pode ainda não aparecer em todas as contas. Veja a [documentação do Gemini Apps](https://support.google.com/gemini/answer/17094296).
 
+#### GitHub Copilot
+
+O Copilot no VS Code, o Copilot CLI e o cloud agent no GitHub usam a pasta canônica completa, com referências e exemplos. O comando `gh skill` está em preview e exige GitHub CLI 2.90.0 ou posterior.
+
+Para instalar no VS Code e no CLI, disponível em todos os projetos locais:
+
+```bash
+gh skill install querogab/linguagem-simples-br linguagem-simples-br@v0.6.0-beta.4 --allow-hidden-dirs --agent github-copilot --scope user
+```
+
+Para usar no Copilot web/cloud agent, execute no repositório em que ele vai trabalhar:
+
+```bash
+gh skill install querogab/linguagem-simples-br linguagem-simples-br@v0.6.0-beta.4 --allow-hidden-dirs --agent github-copilot --scope project
+git add .agents/skills/linguagem-simples-br
+```
+
+Depois, versione a pasta junto do projeto. O Copilot web não oferece upload pessoal de skill; ele lê a skill que está no repositório da tarefa. A estrutura foi validada e visualizada pelo `gh skill`, mas o comportamento ainda não foi testado numa conta do Copilot.
+
 #### ChatGPT web
 
 [Contas elegíveis](https://help.openai.com/articles/20001066) do ChatGPT Business, Enterprise, Healthcare e Edu podem abrir **Plugins > Skills > Create > Upload from your computer** e enviar `dist/linguagem-simples-br-chatgpt-skill-0.6.0-beta.4.zip`.
