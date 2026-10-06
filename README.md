@@ -73,21 +73,15 @@ Em uma ferramenta que não carrega Agent Skills, você pode colar o conteúdo do
 
 ### Interfaces web
 
-Para gerar todos os ZIPs a partir da mesma fonte canônica, sem manter outra cópia editável da skill:
-
-```bash
-python scripts/gerar-pacotes-web.py
-```
+Baixe o arquivo da sua ferramenta na [release `v0.6.0-beta.4`](https://github.com/querogab/linguagem-simples-br/releases/tag/v0.6.0-beta.4). Você não precisa usar o terminal.
 
 #### Claude web e Cowork
 
-O upload do Claude usa `skill.md` em minúsculas e limita a descrição a 200 caracteres.
-
-Depois, em **Customize > Skills**, escolha **Upload a skill** e envie `dist/linguagem-simples-br-claude-web-cowork-0.6.0-beta.4.zip`. A [Anthropic documenta](https://support.claude.com/en/articles/12512180-use-skills-in-claude) o recurso nos planos Free, Pro, Max, Team e Enterprise e o uso da mesma skill no chat e no Cowork. A execução de código precisa estar habilitada; organizações podem restringir uploads.
+[Baixe o ZIP para Claude web e Cowork](https://github.com/querogab/linguagem-simples-br/releases/download/v0.6.0-beta.4/linguagem-simples-br-claude-web-cowork-0.6.0-beta.4.zip). Depois, em **Customize > Skills**, escolha **Upload a skill** e envie o arquivo baixado. A [Anthropic documenta](https://support.claude.com/en/articles/12512180-use-skills-in-claude) o recurso nos planos Free, Pro, Max, Team e Enterprise e o uso da mesma skill no chat e no Cowork. A execução de código precisa estar habilitada; organizações podem restringir uploads.
 
 #### Gemini web
 
-Em uma conta pessoal com Skills liberadas, abra **Skills** e envie `dist/gemini-web/SKILL.md`. O gerador deriva esse arquivo da fonte canônica e troca somente três instruções que o Gemini Flash interpretou de forma diferente nos testes. A interface observada em 06/10/26 aceitou Markdown, mas não ZIP. `references/` e `exemplos/` não acompanham a skill; esta opção instala o núcleo da revisão. O recurso está em implantação gradual e pode ainda não aparecer em todas as contas. Veja a [documentação do Gemini Apps](https://support.google.com/gemini/answer/17094296).
+[Baixe o `SKILL.md` para Gemini web](https://github.com/querogab/linguagem-simples-br/releases/download/v0.6.0-beta.4/SKILL.md). Em uma conta pessoal com Skills liberadas, abra **Skills** e envie o arquivo baixado. Esta versão troca somente três instruções que o Gemini Flash interpretou de forma diferente nos testes. A interface observada em 06/10/26 aceitou Markdown, mas não ZIP. `references/` e `exemplos/` não acompanham a skill; esta opção instala o núcleo da revisão. O recurso está em implantação gradual e pode ainda não aparecer em todas as contas. Veja a [documentação do Gemini Apps](https://support.google.com/gemini/answer/17094296).
 
 #### GitHub Copilot
 
@@ -110,11 +104,13 @@ Depois, versione a pasta junto do projeto. O Copilot web não oferece upload pes
 
 #### ChatGPT web
 
-[Contas elegíveis](https://help.openai.com/articles/20001066) do ChatGPT Business, Enterprise, Healthcare e Edu podem abrir **Plugins > Skills > Create > Upload from your computer** e enviar `dist/linguagem-simples-br-chatgpt-skill-0.6.0-beta.4.zip`.
+[Baixe o ZIP para ChatGPT](https://github.com/querogab/linguagem-simples-br/releases/download/v0.6.0-beta.4/linguagem-simples-br-chatgpt-skill-0.6.0-beta.4.zip). Em uma [conta elegível](https://help.openai.com/articles/20001066) do ChatGPT Business, Enterprise, Healthcare ou Edu, abra **Plugins > Skills > Create > Upload from your computer** e envie o arquivo baixado.
 
-O gerador também cria `dist/linguagem-simples-br-chatgpt-plugin-0.6.0-beta.4.zip`, um plugin mínimo para distribuição da skill no ChatGPT web. Publicar o plugin no diretório da OpenAI exige o [processo próprio de submissão e revisão](https://developers.openai.com/plugins/deploy/submission).
+Há também um [ZIP de plugin para distribuição](https://github.com/querogab/linguagem-simples-br/releases/download/v0.6.0-beta.4/linguagem-simples-br-chatgpt-plugin-0.6.0-beta.4.zip). Ele não é necessário para instalar a skill. Publicá-lo no diretório da OpenAI exige o [processo próprio de submissão e revisão](https://developers.openai.com/plugins/deploy/submission).
 
 Os três ZIPs e o Markdown do Gemini passam por conferência de estrutura, integridade e versão antes de serem gravados. Claude web, Cowork e o núcleo do Gemini web passaram no reteste da beta.4. ChatGPT web ainda não foi testado por falta de conta elegível.
+
+Quem mantém o projeto pode recriar esses arquivos a partir da fonte canônica com `python scripts/gerar-pacotes-web.py`.
 
 ## Como usar
 
