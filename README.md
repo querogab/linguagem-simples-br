@@ -6,7 +6,7 @@ Skill para revisar textos em **Linguagem Simples** no português do Brasil.
 
 Ela ajuda a encontrar problemas de estrutura, frases e vocabulário, reescreve o que atrapalha a leitura e inclui uma conferência para evitar a perda de fatos, prazos, condições e referências legais. Foi construída com base na **ABNT NBR ISO 24495-1:2024**, no [Manual de Linguagem Simples da Câmara dos Deputados](https://bd.camara.leg.br/bd/handle/bdcamara/41947) e na [Lei 15.263/2025](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15263.htm).
 
-> **Beta pública (`v0.6.0-beta.3`).** A instalação e a integridade do pacote foram verificadas de forma reproduzível no OpenCode `1.18.33`. A skill também foi instalada e usada com sucesso no Claude Code e no Codex. O teste com leitores do público-alvo continua pendente. Veja o [CHANGELOG](CHANGELOG.md).
+> **Beta pública (`v0.6.0-beta.4`).** A instalação e a integridade do pacote foram verificadas de forma reproduzível no OpenCode `1.18.33`. A skill também foi instalada e usada com sucesso no Claude Code e no Codex. O teste com leitores do público-alvo continua pendente. Veja o [CHANGELOG](CHANGELOG.md).
 
 ## Veja um exemplo
 
