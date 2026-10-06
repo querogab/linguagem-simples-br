@@ -2,15 +2,30 @@
 
 Este arquivo registra mudanças que afetam quem usa a skill. Métodos, entradas e resultados completos ficam em [`testes/resultados/`](testes/resultados/).
 
-## Em desenvolvimento
+## v0.6.0-beta.4 — 06/10/26
 
 ### Adicionado
 
-- Gerador reproduzível de pacotes para Claude web/Cowork, Gemini web pessoal, ChatGPT Skill e plugin do ChatGPT, todos derivados do mesmo `SKILL.md`.
+- Gerador reproduzível de pacotes para Claude web/Cowork, ChatGPT Skill e plugin do ChatGPT, todos derivados do mesmo `SKILL.md`.
+- Variante Markdown do núcleo para Gemini web pessoal, gerada da fonte canônica sem manter uma segunda cópia editável.
+
+### Corrigido
+
+- Dados ausentes não podem virar datas, horários, valores ou links plausíveis nem em exemplos; a saída deve usar marcadores de confirmação.
+- Contagens só podem aparecer depois de conferência mecânica.
+- Rótulos gramaticais incertos devem ser omitidos em favor da descrição concreta da mudança.
+- A avaliação de utilizabilidade agora exige ação, acesso e prazo completos no contexto fornecido e declara que análise técnica não prova compreensão.
+- O inciso XI da Lei 15.263/2025 não pode justificar a retirada do masculino genérico.
+- A descrição curta do Claude/Cowork ganhou gatilhos literais de revisão, simplificação e clareza.
+
+### Verificado
+
+- Os três ZIPs e a variante Markdown do Gemini passaram nas verificações locais de estrutura, integridade, versão e geração determinística.
+- Claude web e Cowork passaram com Opus 5.5 em esforço médio; o núcleo do Gemini web passou com Flash 3.6.
 
 ### Ainda não verificado
 
-- A estrutura e a integridade dos quatro ZIPs foram conferidas localmente. O upload e o comportamento no Claude web, no Cowork, no Gemini web e no ChatGPT web ainda precisam de teste próprio.
+- ChatGPT Skill e plugin do ChatGPT não foram enviados porque não havia conta elegível para o teste.
 
 ## v0.6.0-beta.3 — 30/09/26
 

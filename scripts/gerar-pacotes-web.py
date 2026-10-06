@@ -13,8 +13,43 @@ RAIZ = Path(__file__).resolve().parents[1]
 FONTE = RAIZ / ".agents" / "skills" / "linguagem-simples-br"
 NOME = "linguagem-simples-br"
 DESCRICAO_CLAUDE = (
-    "Revisa e reescreve textos em Linguagem Simples em português do Brasil. "
-    "Use em comunicados, editais, ofícios, FAQs, e-mails, manuais e materiais educativos."
+    "Use sempre que pedirem para revisar, simplificar, clarear ou facilitar um texto em PT-BR. "
+    "Aplica Linguagem Simples a comunicados, editais, ofícios, FAQs, e-mails e manuais."
+)
+CONTAGEM_CANONICA = (
+    "- **Contagens declaradas:** só informar quantidade de palavras, frases, itens ou "
+    "redução percentual depois de conferir mecanicamente. Se não puder conferir, explicar "
+    "a mudança sem número. Nunca estimar uma contagem."
+)
+CONTAGEM_GEMINI = (
+    "- **Contagens declaradas:** não informar quantidade de palavras, frases ou redução "
+    "percentual por iniciativa própria. Se o usuário pedir uma contagem, conferir "
+    "mecanicamente; se não puder conferir, dizer isso e explicar a mudança sem número. "
+    "Nunca estimar."
+)
+DADOS_CANONICOS = (
+    "  - **Antipadrão:** não sugerir `23h59`, `18h`, `10/10`, `site X` ou equivalente "
+    "quando o original não trouxe esse dado. Escrever `[horário a confirmar]`, "
+    "`[data a confirmar]` e `[link ou local a confirmar]`."
+)
+DADOS_GEMINI = (
+    "  - Se o original não trouxe o dado, a versão revisada, os avisos e os exemplos só "
+    "podem mostrar o marcador entre colchetes. Não demonstrar formato com números, nomes, "
+    "endereços ou links inventados.\n"
+    "  - Antes de entregar, conferir cada data, horário, valor, endereço e link da saída "
+    "contra o original ou o contexto fornecido. O que não tiver fonte deve virar marcador."
+)
+UTILIZAVEL_CANONICO = (
+    "  - Em texto acionável, só marcar ✓ quando a ação, o acesso necessário (link, endereço "
+    "ou localização) e o prazo completo estiverem no trecho ou em contexto adjacente "
+    "fornecido pelo usuário. Não presumir informação ausente. Se faltar um desses elementos, "
+    "marcar ✗ e dizer qual."
+)
+UTILIZAVEL_GEMINI = (
+    f"{UTILIZAVEL_CANONICO}\n"
+    "  - Enumerar todas as lacunas detectadas. Em instrução sobre formulário, conferir "
+    "separadamente acesso ao formulário, data completa e horário-limite; não omitir uma "
+    "lacuna porque outra já justificou o ✗."
 )
 DATA_ZIP = (2026, 9, 30, 0, 0, 0)
 RE_FRONTMATTER = re.compile(r"\A---\r?\n(.*?)\r?\n---\r?\n", re.DOTALL)
@@ -88,12 +123,25 @@ def validar_igualdade(referencia, recebido, rotulo):
         raise ValueError(f"{rotulo}: arquivos divergentes: {diferentes}")
 
 
+def substituir_unico(texto, original, substituto, rotulo):
+    if texto.count(original) != 1:
+        raise ValueError(f"Gemini: trecho canônico inesperado para {rotulo}.")
+    return texto.replace(original, substituto)
+
+
+def criar_skill_gemini(skill_canonica, destino):
+    texto = skill_canonica.decode("utf-8")
+    texto = substituir_unico(texto, CONTAGEM_CANONICA, CONTAGEM_GEMINI, "contagens")
+    texto = substituir_unico(texto, DADOS_CANONICOS, DADOS_GEMINI, "dados ausentes")
+    texto = substituir_unico(texto, UTILIZAVEL_CANONICO, UTILIZAVEL_GEMINI, "utilizável")
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    destino.write_text(texto, encoding="utf-8", newline="\n")
+
+
 def validar_pacotes(
-    canonicos, corpo, pacote_claude, pacote_gemini, pacote_chatgpt, pacote_plugin
+    canonicos, corpo, pacote_claude, skill_gemini, pacote_chatgpt, pacote_plugin
 ):
     raiz = f"{NOME}/"
-
-    validar_igualdade(canonicos, ler_zip(pacote_gemini), "Gemini web")
 
     chatgpt = ler_zip(pacote_chatgpt)
     chatgpt_skill = {
@@ -136,6 +184,17 @@ def validar_pacotes(
     if set(claude) != set(esperado_claude) | {f"{raiz}skill.md"}:
         raise ValueError("Claude: árvore contém arquivo inesperado.")
 
+    frontmatter_gemini, _ = separar_skill(skill_gemini.read_bytes())
+    if campo(frontmatter_gemini, "name") != NOME:
+        raise ValueError("Gemini: nome da skill divergente.")
+    if campo(frontmatter_gemini, "version") != campo(
+        separar_skill(canonicos["SKILL.md"])[0], "version"
+    ):
+        raise ValueError("Gemini: versão da skill divergente.")
+    texto_gemini = skill_gemini.read_text(encoding="utf-8")
+    if any(valor in texto_gemini for valor in ("23h59", "18h", "10/10", "site X")):
+        raise ValueError("Gemini: exemplo indutor permaneceu no arquivo gerado.")
+
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -159,13 +218,14 @@ def main():
     versao = campo(frontmatter, "version")
 
     args.saida.mkdir(parents=True, exist_ok=True)
+    (args.saida / f"{NOME}-gemini-web-{versao}.zip").unlink(missing_ok=True)
     pacote_claude = args.saida / f"{NOME}-claude-web-cowork-{versao}.zip"
-    pacote_gemini = args.saida / f"{NOME}-gemini-web-{versao}.zip"
+    skill_gemini = args.saida / "gemini-web" / "SKILL.md"
     pacote_chatgpt = args.saida / f"{NOME}-chatgpt-skill-{versao}.zip"
     pacote_plugin = args.saida / f"{NOME}-chatgpt-plugin-{versao}.zip"
 
-    criar_zip(pacote_gemini, canonicos)
     criar_zip(pacote_chatgpt, com_prefixo(canonicos, NOME))
+    criar_skill_gemini(canonicos["SKILL.md"], skill_gemini)
 
     claude = dict(canonicos)
     claude.pop("SKILL.md")
@@ -197,17 +257,15 @@ def main():
     criar_zip(pacote_plugin, plugin)
 
     validar_pacotes(
-        canonicos,
-        corpo,
-        pacote_claude,
-        pacote_gemini,
-        pacote_chatgpt,
-        pacote_plugin,
+        canonicos, corpo, pacote_claude, skill_gemini, pacote_chatgpt, pacote_plugin
     )
 
-    pacotes = [pacote_claude, pacote_gemini, pacote_chatgpt, pacote_plugin]
+    pacotes = [pacote_claude, pacote_chatgpt, pacote_plugin]
+    artefatos = [pacote_claude, skill_gemini, pacote_chatgpt, pacote_plugin]
     checksums = "".join(
-        f"{sha256_bytes(pacote.read_bytes())}  {pacote.name}\n" for pacote in pacotes
+        f"{sha256_bytes(artefato.read_bytes())}  "
+        f"{artefato.relative_to(args.saida).as_posix()}\n"
+        for artefato in artefatos
     )
     (args.saida / "SHA256SUMS.txt").write_text(checksums, encoding="ascii", newline="\n")
 
@@ -215,6 +273,7 @@ def main():
     print(f"Versão: {versao}")
     for pacote in pacotes:
         print(f"OK {pacote.name} ({len(ler_zip(pacote))} arquivos)")
+    print("OK gemini-web/SKILL.md")
     print("OK SHA256SUMS.txt")
 
 

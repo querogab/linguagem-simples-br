@@ -4,7 +4,7 @@ description: >-
   Revisa e reescreve textos em Linguagem Simples no português do Brasil, seguindo a ABNT NBR ISO 24495-1:2024, a Lei 15.263/2025 e o Manual de Linguagem Simples da Câmara dos Deputados. Use sempre que o usuário pedir para revisar, simplificar, clarear ou deixar mais fácil de entender um texto em PT-BR — comunicado, edital, ofício, FAQ, e-mail institucional, manual, material educativo — e também quando ele reclamar que um texto está burocrático, empolado, em juridiquês ou difícil de entender. Use mesmo que ele não diga as palavras "linguagem simples". Diagnostica antes de mexer, decide o que NÃO mudar e preserva fato, prazo, condição e remissão legal. Explica as mudanças quando o usuário pede, no modo didático ou em texto de órgão público. Não é Leitura Fácil: se o pedido for adaptar para pessoas com deficiência intelectual, explica a diferença e encaminha.
 license: MIT
 metadata:
-  version: 0.6.0-beta.3
+  version: 0.6.0-beta.4
   language: pt-BR
   status: beta — em validação comportamental
 ---
@@ -139,6 +139,7 @@ Aplicar diretrizes em ordem (essas são as do Manual da Câmara, alinhadas à AB
 - Apenas o necessário (cortar redundância, adjetivação cerimonial)
 - Média ideal 15–20 palavras por frase; acima de 25 verificar; acima de 30 raramente justifica (alinhado com o Passo 2)
 - Voz ativa (reservar passiva para quando o foco é o que se faz, não quem faz)
+- Só nomear voz passiva, nominalização ou outra categoria gramatical quando a construção corresponder a ela. Se houver dúvida, descrever a mudança concreta sem dar um rótulo técnico.
 - Ordem direta (sujeito, verbo, complementos)
 - Sem frases intercaladas
 - Afirmativas (eliminar negativas duplas)
@@ -152,6 +153,7 @@ Aplicar diretrizes em ordem (essas são as do Manual da Câmara, alinhadas à AB
 - Evitar estrangeirismo se houver equivalente em português usual
 - Explicar siglas na primeira menção (ou não usar siglas internas)
 - **Barra para marcar gênero** ("candidato/a", "servidor/a") não é o mesmo que flexão neutra. Quando não alterar uma denominação oficial nem o alcance jurídico, preferir construção legível e gramatical sem barra ("pessoa candidata", "quem se inscreveu", "equipe"). Se a forma nomeia categoria jurídica ou cargo oficial, preservar ou pedir confirmação; não inventar flexão nova.
+- **O inciso XI da Lei 15.263/2025 não manda retirar masculino genérico.** Ele veda, no setor público, novas flexões contrárias às regras gramaticais consolidadas, ao Volp e ao Acordo Ortográfico. Não usar esse inciso para justificar uma troca feita por legibilidade ou fala direta.
 
 **Tabela de trocas frequentes (PT-BR, burocratês → comum)**
 
@@ -221,9 +223,13 @@ Aplicar diretrizes em ordem (essas são as do Manual da Câmara, alinhadas à AB
 🔴 **Trava de fidelidade — conferir ANTES de entregar.** Simplificar a forma nunca pode apagar conteúdo. Antes de devolver, contar e conferir:
 
 - **Itens de lista:** se o original tem 18 incisos, a versão revisada tem 18. **Contar, não estimar.**
+- **Contagens declaradas:** só informar quantidade de palavras, frases, itens ou redução percentual depois de conferir mecanicamente. Se não puder conferir, explicar a mudança sem número. Nunca estimar uma contagem.
 - **Identificadores e hierarquia:** em edital, ato normativo ou documento com referência interna, cada número, letra e nível permanece ligado ao mesmo conteúdo. Quadro-resumo pode repetir informação, mas não substituir nem renumerar os itens.
 - **Referente ausente:** se não é possível saber o que um pronome ou demonstrativo retoma, não completar nem substituir por outro pronome. Sinalizar a lacuna e deixar `[referente a confirmar]`; texto fluente com informação presumida reprova na fidelidade.
 - **Prazos, valores, datas e condições** — cada um sobrevive, com o mesmo número.
+- **Dado ausente não vira exemplo concreto.** Se faltar data, horário, valor, endereço, link ou responsável, usar `[data a confirmar]`, `[horário a confirmar]` ou outro marcador explícito. Não preencher com um valor plausível nem mesmo depois de "por exemplo".
+  - **Antipadrão:** não sugerir `23h59`, `18h`, `10/10`, `site X` ou equivalente quando o original não trouxe esse dado. Escrever `[horário a confirmar]`, `[data a confirmar]` e `[link ou local a confirmar]`.
+  - Dia da semana sozinho, como `sexta-feira`, não é prazo completo: ainda faltam a data e, quando houver limite intradiário, o horário.
 - **Remissões legais** (lei, decreto, artigo citado dentro do texto) — sobrevivem, mesmo que a frase mude.
 - **Exceções e ressalvas** — "salvo", "exceto", "desde que" mudam o sentido; se sumirem, o texto passou a dizer outra coisa.
 - 🔴 **Modalidade — o grau de certeza é conteúdo.** "Deverá", "poderá", "pretende", "estima-se", "em regra", "aproximadamente", "até" dizem **o quanto o texto se compromete**. Trocar por afirmação direta não simplifica: **inventa certeza que o original não tinha.**
@@ -282,12 +288,13 @@ Texto revisado, pronto pra copiar. Sem marcas, sem comentários.
 
 ### 3. Avaliação pelos 4 princípios ISO 24495-1
 
-Marcar ✓ / ✗ / **N/A** + 1 linha de justificativa. N/A é resposta legítima — usar quando o princípio não cabe no tipo de texto.
+Esta avaliação é um diagnóstico técnico, não evidência direta de compreensão pelo público. Dizer isso junto da tabela. Marcar ✓ / ✗ / **N/A** + 1 linha de justificativa. N/A é resposta legítima — usar quando o princípio não cabe no tipo de texto.
 
 - **Relevante?** A informação serve ao público definido no Passo 1?
 - **Encontrável?** A estrutura permite escaneamento? Ordem decrescente de importância?
 - **Compreensível?** Frases curtas, palavras comuns, termos técnicos explicados?
 - **Utilizável/Acionável?** O leitor sabe o que fazer depois de ler?
+  - Em texto acionável, só marcar ✓ quando a ação, o acesso necessário (link, endereço ou localização) e o prazo completo estiverem no trecho ou em contexto adjacente fornecido pelo usuário. Não presumir informação ausente. Se faltar um desses elementos, marcar ✗ e dizer qual.
   - **Marcar N/A** se o texto é descritivo, narrativo ou expressivo por natureza (bio, manifesto, hero de marca, parágrafo de história, ementa). Justificar: *"N/A — texto descritivo, ação acontece nos CTAs adjacentes / na página seguinte / fora do escopo deste trecho."*
   - Só marcar ✗ quando o texto **deveria** acionar e falha (FAQ que não responde, formulário sem instrução, edital sem prazo, e-mail sem próximo passo).
 
@@ -310,6 +317,8 @@ A ISO 24495-1 e o Manual da Câmara incluem o teste com leitores no processo de 
 2. **Pergunta de compreensão pós-leitura.** Após a leitura silenciosa, perguntar em palavras próprias: "O que esse texto está pedindo / explicando / oferecendo?". Se a resposta diverge do objetivo definido no Passo 1, o texto não está claro.
 3. **Cloze test (preencher lacunas).** Remover palavras em intervalos regulares e pedir para o leitor preencher. Definir antes o critério de interpretação adequado ao público e ao protocolo usado.
 4. **Observação de uso (para textos acionáveis).** O leitor consegue **completar a ação** que o texto pede (preencher formulário, escolher botão, anexar documento)? Se trava, o problema é do texto.
+
+O critério do teste deve cobrar somente informação presente. Se data, link ou instrução estiver ausente, o objetivo do teste é detectar a lacuna, não exigir que o leitor adivinhe a resposta.
 
 **Quando recomendar teste:**
 
