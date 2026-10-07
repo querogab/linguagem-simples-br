@@ -6,7 +6,16 @@ Esta é uma skill para revisar textos em **Linguagem Simples** no português do 
 
 Ela ajuda a encontrar problemas de estrutura, frases e vocabulário e reescreve o que atrapalha a leitura. Também faz uma conferência para evitar que fatos, prazos, condições e referências legais se percam. Foi construída com base na **ABNT NBR ISO 24495-1:2024**, no [Manual de Linguagem Simples da Câmara dos Deputados](https://bd.camara.leg.br/bd/handle/bdcamara/41947) e na [Lei 15.263/2025](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15263.htm).
 
-> **Beta pública (`v0.6.0-beta.4`).** Nesta versão, a skill passou nos testes feitos no Claude web e no Cowork. Uma versão reduzida, sem os arquivos de apoio, passou no Gemini web. No OpenCode `1.18.33`, um roteiro que pode ser repetido confirmou que a instalação funciona e que os arquivos chegam completos e iguais aos originais. A skill também foi instalada e usada com sucesso no Claude Code e no Codex. O teste com leitores do público-alvo continua pendente. Veja o [CHANGELOG](CHANGELOG.md).
+> **Beta pública (`v0.6.0-beta.4`).** É uma versão de teste aberta a qualquer pessoa. Ela já funciona, mas ainda pode mudar e tem limites conhecidos, listados em [Limites atuais](#limites-atuais).
+>
+> O que foi testado nesta versão:
+>
+> - **Claude web e Cowork:** a skill passou num teste curto, com uma frase de exemplo.
+> - **Gemini web:** uma versão reduzida, sem os arquivos de apoio, passou no mesmo teste.
+> - **OpenCode `1.18.33`:** um roteiro que pode ser repetido confirmou que a instalação funciona e que os arquivos chegam completos e iguais aos originais.
+> - **Claude Code e Codex:** a skill foi instalada e usada com sucesso, mas sem roteiro registrado.
+>
+> Ainda faltam o teste com leitores do público-alvo e os testes de uso no ChatGPT e no Copilot. Se você testar a skill, conte como foi no [formulário de retorno](https://forms.gle/mEHuUrvx5aYQMhus7). O histórico das versões está no [CHANGELOG](CHANGELOG.md).
 
 ## Veja um exemplo
 
@@ -183,7 +192,13 @@ Na v0.5.1, cinco gêneros de texto de órgão público foram revisados de três 
 2. o modelo com um prompt de oito linhas;
 3. o modelo com a skill.
 
-Cada forma rodou uma vez por texto, no mesmo modelo e em uma conversa separada.
+Cada forma rodou uma vez por texto, sempre no modelo `deepseek-v4-flash` e em uma conversa separada. Com outro modelo, os números podem ser diferentes.
+
+Como o resultado de um prompt depende do que ele pede, o prompt de oito linhas vai transcrito aqui:
+
+> Reescreva em português claro. Frases de até 20 palavras. Voz ativa. Uma ideia por frase. Troque substantivo abstrato por verbo. Não perca nenhum fato, prazo ou condição. Diga a quem a regra se aplica. Não infantilize.
+
+São oito instruções curtas de escrita clara, e uma delas manda preservar fatos, prazos e condições. O prompt não traz exemplos nem pede diagnóstico ou conferência antes da entrega. O mesmo texto está no [plano de testes](testes/plano-de-testes.md).
 
 ### 1. Qual produziu menos frases longas?
 
