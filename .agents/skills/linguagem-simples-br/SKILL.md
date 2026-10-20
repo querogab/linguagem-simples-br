@@ -4,7 +4,7 @@ description: >-
   Revisa e reescreve textos em Linguagem Simples no português do Brasil, seguindo a ABNT NBR ISO 24495-1:2024, a Lei 15.263/2025 e o Manual de Linguagem Simples da Câmara dos Deputados. Use sempre que o usuário pedir para revisar, simplificar, clarear ou deixar mais fácil de entender um texto em PT-BR — comunicado, edital, ofício, FAQ, e-mail institucional, manual, material educativo — e também quando ele reclamar que um texto está burocrático, empolado, em juridiquês ou difícil de entender. Use mesmo que ele não diga as palavras "linguagem simples". Diagnostica antes de mexer, decide o que NÃO mudar e preserva fato, prazo, condição e remissão legal. Explica as mudanças quando o usuário pede, no modo didático ou em texto de órgão público. Não é Leitura Fácil: se o pedido for adaptar para pessoas com deficiência intelectual, explica a diferença e encaminha.
 license: MIT
 metadata:
-  version: 0.6.0-beta.4
+  version: 0.6.0-beta.5
   language: pt-BR
   status: beta — em validação comportamental
 ---
@@ -355,7 +355,7 @@ Em vez do output padrão, para **cada** diretriz aplicada:
 3. **Exemplo** — nesta ordem de preferência:
    - **a)** par antes/depois da pasta [`exemplos/`](exemplos/) desta skill, se houver exemplo pertinente disponível;
    - **b)** trecho de lei, decreto ou outro ato cuja natureza oficial e condição de reutilização tenham sido verificadas na fonte. Publicação por órgão público, sozinha, não basta; na dúvida, citar por link ou criar exemplo autoral;
-   - **c)** citação de obra da literatura de LS (**Manual da Câmara — Roedel, 2024**; **Comunica Simples — Heloísa Fischer**) **somente com o texto em mãos**, transcrito literalmente e com a fonte indicada.
+   - **c)** citação de obra da literatura de LS (como o **Manual da Câmara — Roedel, 2024**) **somente com o texto em mãos**, transcrito literalmente e com a fonte indicada.
    > 🔴 **Trava dura: nunca atribuir a uma pessoa nomeada um exemplo que você gerou.** Se a obra não está aberta na sessão, não escreva "exemplo do Manual da Roedel" — use (a), uma fonte verificada de (b), ou diga que a diretriz é da literatura sem forjar a citação. Inventar par antes/depois e assinar com nome de autora é o pior erro que esta skill pode cometer.
 4. **Aplicação ao texto do usuário** (mostrar onde, mostrar como)
 
@@ -382,5 +382,4 @@ Entrega só o output padrão + nota didática focada apenas na diretriz pedida (
 - Roedel, Patricia. *Manual de Linguagem Simples: como planejar, desenvolver e testar textos que funcionam.* Câmara dos Deputados, Edições Câmara, 2024. ISBN 978-85-402-1044-8. Disponível em: https://bd.camara.leg.br/bd/handle/bdcamara/41947
 - ABNT NBR ISO 24495-1:2024. Linguagem Simples — Parte 1: Princípios e diretrizes norteadores.
 - Lei 15.263, de 14 de novembro de 2025. Institui a Política Nacional de Linguagem Simples. https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15263.htm
-- Fischer, Heloísa. *Clareza em textos de e-gov, uma questão de cidadania.* Método Comunica Simples. https://comunicasimples.com.br
 - Guia de Linguagem e Design Simples ICICT/Fiocruz.

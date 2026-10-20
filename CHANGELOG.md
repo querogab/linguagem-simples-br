@@ -2,12 +2,17 @@
 
 Este arquivo registra mudanças que afetam quem usa a skill. Cada caso foi testado uma vez por versão, então os resultados confirmam correções específicas, não uma taxa de acerto. Resultados completos em [`testes/resultados/`](testes/resultados/); limites atuais no [README](README.md#limites-atuais).
 
-## Em desenvolvimento
+## v0.6.0-beta.5 — 20/10/26
 
 ### Mudou
 
+- A lista de referências e o modo didático deixaram de citar uma obra que não foi consultada diretamente.
 - README revisado com a própria skill, com instruções para o GitHub Copilot e links diretos para baixar os arquivos das interfaces web.
 - [Formulário de retorno](https://forms.gle/mEHuUrvx5aYQMhus7) que não exige conta no GitHub.
+
+### Verificado
+
+- As instruções testadas na beta.4 não mudaram. Os pacotes foram gerados de novo e conferidos pelo script de validação.
 
 ## v0.6.0-beta.4 — 06/10/26
 

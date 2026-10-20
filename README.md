@@ -6,9 +6,9 @@ Esta é uma skill para revisar textos em **Linguagem Simples** no português do 
 
 Ela ajuda a encontrar problemas de estrutura, frases e vocabulário e reescreve o que atrapalha a leitura. Também faz uma conferência para evitar que fatos, prazos, condições e referências legais se percam. Foi construída com base na **ABNT NBR ISO 24495-1:2024**, no [Manual de Linguagem Simples da Câmara dos Deputados](https://bd.camara.leg.br/bd/handle/bdcamara/41947) e na [Lei 15.263/2025](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15263.htm).
 
-> **Beta pública (`v0.6.0-beta.4`).** É uma versão de teste aberta a qualquer pessoa. Ela já funciona, mas ainda pode mudar e tem limites conhecidos, listados em [Limites atuais](#limites-atuais).
+> **Beta pública (`v0.6.0-beta.5`).** É uma versão de teste aberta a qualquer pessoa. Ela já funciona, mas ainda pode mudar e tem limites conhecidos, listados em [Limites atuais](#limites-atuais).
 >
-> O que foi testado nesta versão:
+> O que foi testado até agora:
 >
 > - **Claude web e Cowork:** a skill passou num teste curto, com uma frase de exemplo.
 > - **Gemini web:** uma versão reduzida, sem os arquivos de apoio, passou no mesmo teste.
@@ -58,15 +58,15 @@ Escolha o caminho pela ferramenta que você usa. Se você usa o assistente de IA
 
 ### Interfaces web
 
-Baixe o arquivo da sua ferramenta na [página desta versão (release `v0.6.0-beta.4`)](https://github.com/querogab/linguagem-simples-br/releases/tag/v0.6.0-beta.4).
+Baixe o arquivo da sua ferramenta na [página desta versão (release `v0.6.0-beta.5`)](https://github.com/querogab/linguagem-simples-br/releases/tag/v0.6.0-beta.5).
 
 #### Claude web e Cowork
 
-[Baixe o ZIP para Claude web e Cowork](https://github.com/querogab/linguagem-simples-br/releases/download/v0.6.0-beta.4/linguagem-simples-br-claude-web-cowork-0.6.0-beta.4.zip). Depois, em **Customize > Skills**, escolha **Upload a skill** e envie o arquivo baixado. A [Anthropic documenta](https://support.claude.com/en/articles/12512180-use-skills-in-claude) o recurso nos planos Free, Pro, Max, Team e Enterprise e o uso da mesma skill no chat e no Cowork. A opção de executar código precisa estar ativada. Organizações podem restringir o envio de skills.
+[Baixe o ZIP para Claude web e Cowork](https://github.com/querogab/linguagem-simples-br/releases/download/v0.6.0-beta.5/linguagem-simples-br-claude-web-cowork-0.6.0-beta.5.zip). Depois, em **Customize > Skills**, escolha **Upload a skill** e envie o arquivo baixado. A [Anthropic documenta](https://support.claude.com/en/articles/12512180-use-skills-in-claude) o recurso nos planos Free, Pro, Max, Team e Enterprise e o uso da mesma skill no chat e no Cowork. A opção de executar código precisa estar ativada. Organizações podem restringir o envio de skills.
 
 #### Gemini web
 
-[Baixe o `SKILL.md` para Gemini web](https://github.com/querogab/linguagem-simples-br/releases/download/v0.6.0-beta.4/SKILL.md). Em uma conta pessoal com Skills liberadas, abra **Skills** e envie o arquivo baixado. Esta versão troca somente três instruções que o Gemini Flash interpretou de forma diferente nos testes. A interface observada em 06/10/26 aceitou Markdown, mas não ZIP. Os arquivos de apoio, `references/` e `exemplos/`, não vão junto. Esta opção instala só o núcleo da revisão. O recurso está em implantação gradual e pode ainda não aparecer em todas as contas. Veja a [documentação do Gemini Apps](https://support.google.com/gemini/answer/17094296).
+[Baixe o `SKILL.md` para Gemini web](https://github.com/querogab/linguagem-simples-br/releases/download/v0.6.0-beta.5/SKILL.md). Em uma conta pessoal com Skills liberadas, abra **Skills** e envie o arquivo baixado. Esta versão troca somente três instruções que o Gemini Flash interpretou de forma diferente nos testes. A interface observada em 06/10/26 aceitou Markdown, mas não ZIP. Os arquivos de apoio, `references/` e `exemplos/`, não vão junto. Esta opção instala só o núcleo da revisão. O recurso está em implantação gradual e pode ainda não aparecer em todas as contas. Veja a [documentação do Gemini Apps](https://support.google.com/gemini/answer/17094296).
 
 #### GitHub Copilot
 
@@ -75,13 +75,13 @@ O Copilot no VS Code, o Copilot CLI e o cloud agent no GitHub usam a pasta canô
 Para instalar no VS Code e no CLI, disponível em todos os projetos locais:
 
 ```bash
-gh skill install querogab/linguagem-simples-br linguagem-simples-br@v0.6.0-beta.4 --allow-hidden-dirs --agent github-copilot --scope user
+gh skill install querogab/linguagem-simples-br linguagem-simples-br@v0.6.0-beta.5 --allow-hidden-dirs --agent github-copilot --scope user
 ```
 
 Para usar no Copilot web/cloud agent, execute no repositório em que ele vai trabalhar:
 
 ```bash
-gh skill install querogab/linguagem-simples-br linguagem-simples-br@v0.6.0-beta.4 --allow-hidden-dirs --agent github-copilot --scope project
+gh skill install querogab/linguagem-simples-br linguagem-simples-br@v0.6.0-beta.5 --allow-hidden-dirs --agent github-copilot --scope project
 git add .agents/skills/linguagem-simples-br
 ```
 
@@ -89,11 +89,11 @@ Depois, versione a pasta junto do projeto. O Copilot web não oferece upload pes
 
 #### ChatGPT web
 
-[Baixe o ZIP para ChatGPT](https://github.com/querogab/linguagem-simples-br/releases/download/v0.6.0-beta.4/linguagem-simples-br-chatgpt-skill-0.6.0-beta.4.zip). Em uma [conta elegível](https://help.openai.com/articles/20001066) do ChatGPT Business, Enterprise, Healthcare ou Edu, abra **Plugins > Skills > Create > Upload from your computer** e envie o arquivo baixado.
+[Baixe o ZIP para ChatGPT](https://github.com/querogab/linguagem-simples-br/releases/download/v0.6.0-beta.5/linguagem-simples-br-chatgpt-skill-0.6.0-beta.5.zip). Em uma [conta elegível](https://help.openai.com/articles/20001066) do ChatGPT Business, Enterprise, Healthcare ou Edu, abra **Plugins > Skills > Create > Upload from your computer** e envie o arquivo baixado.
 
-Há também um [ZIP de plugin para distribuição](https://github.com/querogab/linguagem-simples-br/releases/download/v0.6.0-beta.4/linguagem-simples-br-chatgpt-plugin-0.6.0-beta.4.zip). Ele não é necessário para instalar a skill. Publicá-lo no diretório da OpenAI exige o [processo próprio de submissão e revisão](https://developers.openai.com/plugins/deploy/submission).
+Há também um [ZIP de plugin para distribuição](https://github.com/querogab/linguagem-simples-br/releases/download/v0.6.0-beta.5/linguagem-simples-br-chatgpt-plugin-0.6.0-beta.5.zip). Ele não é necessário para instalar a skill. Publicá-lo no diretório da OpenAI exige o [processo próprio de submissão e revisão](https://developers.openai.com/plugins/deploy/submission).
 
-Claude web, Cowork e o núcleo do Gemini web passaram no reteste da beta.4. ChatGPT web ainda não foi testado por falta de conta elegível.
+Claude web, Cowork e o núcleo do Gemini web passaram no reteste da beta.4. A beta.5 mudou só a lista de referências e o exemplo de obra citável no modo didático, partes que o reteste não cobria. ChatGPT web ainda não foi testado por falta de conta elegível.
 
 Quem mantém o projeto pode recriar esses arquivos a partir da fonte canônica com `python scripts/gerar-pacotes-web.py`. O script confere a estrutura, a integridade e a versão de cada arquivo antes de gravá-lo.
 
